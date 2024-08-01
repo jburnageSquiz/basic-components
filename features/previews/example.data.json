@@ -1,0 +1,81 @@
+{
+    "componentID":"features",
+    "sectionHeading":"Features",
+    "sectionContent":"<p>Ipsa sint sit. Quis ducimus tempore dolores impedit et dolor cumque alias maxime. Enim reiciendis minus et rerum hic non. Dicta quas cum quia maiores iure. Quidem nulla qui assumenda incidunt voluptatem tempora deleniti soluta.</p>",
+    "introTextTransitionEffect": "Fade Up",
+    "featureArray": [
+        {
+            "featureTitle": "Eius Text",
+            "featureContent": "Magni repellendus vel ullam hic officia accusantium ipsa dolor omnis dolor voluptatem",
+            "featureLinkURL":"matrix-asset://component-service-token/893",
+            "featureLinkText":"Get started",
+            "textTransitionEffect": "Fade Right",
+            "textTransitionDelay": 200,
+            "imageTransitionEffect" : "Zoom Out",
+            "imageTransitionDelay" : 200,
+            "featureImageArray": [ {
+                "featureImage": {
+                    "name": "My Image",
+                    "alt": "This is the image alt text",
+                    "caption": "This is a caption",
+                    "imageVariations": {
+                        "original": {
+                            "url": "https://picsum.photos/id/250/800/530",
+                            "width": 800,
+                            "height": 530,
+                            "byteSize": 1000,
+                            "mimeType": "image/jpeg",
+                            "aspectRatio": "1:1",
+                            "sha1Hash": "1234567890abcdef1234567890abcdef12345678"
+                        }
+                    }
+                }
+            }, {
+                "featureImage": {
+                    "name": "My Image",
+                    "alt": "This is the image alt text",
+                    "caption": "This is a caption",
+                    "imageVariations": {
+                        "original": {
+                            "url": "https://picsum.photos/id/256/800/530",
+                            "width": 800,
+                            "height": 530,
+                            "byteSize": 1000,
+                            "mimeType": "image/jpeg",
+                            "aspectRatio": "1:1",
+                            "sha1Hash": "1234567890abcdef1234567890abcdef12345678"
+                        }
+                    }
+                }
+            } ]
+        },
+        {
+            "featureTitle": "Eius provident",
+            "featureContent": "Magni repellendus vel ullam hic officia accusantium ipsa dolor omnis dolor voluptatem",
+            "featureLinkURL":"matrix-asset://component-service-token/893",
+            "featureLinkText":"Get started",
+            "textTransitionEffect": "Fade Up",
+            "textTransitionDelay": 200,
+            "imageTransitionEffect" : "Zoom Out - Down",
+            "imageTransitionDelay" : 200,
+            "featureImageArray": [ {
+                "featureImage": {
+                    "name": "My Image",
+                    "alt": "This is the image alt text",
+                    "caption": "This is a caption",
+                    "imageVariations": {
+                        "original": {
+                            "url": "https://picsum.photos/id/250/800/530",
+                            "width": 800,
+                            "height": 530,
+                            "byteSize": 1000,
+                            "mimeType": "image/jpeg",
+                            "aspectRatio": "1:1",
+                            "sha1Hash": "1234567890abcdef1234567890abcdef12345678"
+                        }
+                    }
+                }
+            } ]
+        }
+    ]
+}

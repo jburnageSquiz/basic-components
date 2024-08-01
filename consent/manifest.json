@@ -1,0 +1,140 @@
+{
+  "$schema": "http://localhost:3000/schemas/v1.json",
+  "name": "dxp-consent",
+  "namespace": "ps-bootstrap-components",
+  "displayName": "DXP CDP Consent",
+  "description": "DXP CDP Consent",
+  "version": "0.0.2",
+  "mainFunction": "main",
+  "icon": {
+    "id": "admin_panel_settings",
+    "color": {
+      "type": "hex",
+      "value": "#2D2D2D"
+    }
+  },
+  "functions": [
+    {
+      "name": "main",
+      "entry": "main.js",
+      "input": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "consentHeading": {
+            "type": "string",
+            "title": "Consent Heading"
+          },
+            "consentContent": {
+            "type": "FormattedText",
+            "title": "Consent Message"
+          },
+          "personaArray":  {
+            "type": "array",
+            "title": "List of personas",
+            "items": {
+              "type": "object",
+              "title": "Personas",
+              "description": "The fields must exactly match the values in the CDP",
+              "additionalProperties": false,
+              "properties": {
+                "personaName": {
+                  "type": "string",
+                  "title": "Persona Name"
+                },
+                "personaEventID": {
+                  "type": "string",
+                  "title": "Persona Event ID"
+                },
+                "personaEventValue": {
+                  "type": "string",
+                  "title": "Persona Event Value"
+                }
+              },
+              "required": ["personaName","personaEventID","personaEventValue"]
+            }
+          }
+        },
+        "required": ["consentHeading"]
+      },
+      "output": {
+        "responseType": "html",
+        "staticFiles": [
+          {
+            "location": "header",
+            "file": {
+              "type": "css",
+              "filepath": "default.css"
+            }
+          },
+          {
+            "location": "footer",
+            "file": {
+              "type": "js",
+              "filepath": "default.js"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "previews": {
+    "default": {
+      "functionData": {
+        "main": {
+          "inputData": {
+            "type": "file",
+            "path": "previews/example.data.json"
+          },
+          "wrapper": {
+            "path": "previews/preview.html"
+          }
+        }
+      }
+    }
+  },
+  "staticFiles": {
+    "locationRoot": "static"
+  },
+  "mockedUris": {
+    "matrix-asset://component-service-token/893" : {
+      "type": "inline",
+      "value": {
+        "id": "id-inline",
+        "type": "root_folder",
+        "type_name": "Root Folder",
+        "version": "0.0.1",
+        "name": "Root Folder",
+        "short_name": "/",
+        "status": {
+          "id": 2,
+          "code": "under_construction"
+        },
+        "created": {
+          "date": "2020-02-27T09:47:27+11:00",
+          "user_id": null
+        },
+        "updated": {
+          "date": "2020-02-27T09:47:27+11:00",
+          "user_id": ""
+        },
+        "published": {
+          "date": "2020-02-27T09:47:27+11:00",
+          "user_id": "null"
+        },
+        "status_changed": {
+          "date": "2020-02-27T09:47:27+11:00",
+          "user_id": "null"
+        },
+        "url": "xxx",
+        "urls": [],
+        "attributes": {
+          "test": "test"
+        },
+        "additional": {}
+      }
+
+    }
+  }
+
+}

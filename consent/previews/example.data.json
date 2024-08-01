@@ -1,0 +1,16 @@
+{
+    "consentHeading":"Squiz DXP Personalisation",
+    "consentContent":"<p>To get the best experience from this website we gather information about your visit with us to deliver you personalised content.</p>",
+    "personaArray": [
+        {
+            "personaName": "Customer",
+            "personaEventID": "persona-selector",
+            "personaEventValue": "customer"
+        },
+        {
+            "personaName": "Prospect",
+            "personaEventID": "persona-selector",
+            "personaEventValue": "prospect"
+        }
+    ]
+}

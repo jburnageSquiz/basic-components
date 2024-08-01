@@ -1,0 +1,116 @@
+{
+  "$schema": "http://localhost:3000/schemas/v1.json",
+  "name": "testimonials",
+  "namespace": "ps-bootstrap-components",
+  "displayName": "Testimonials",
+  "description": "Testimonials",
+  "version": "0.0.1",
+  "mainFunction": "main",
+  "icon": {
+    "id": "format_quote",
+    "color": {
+      "type": "hex",
+      "value": "#2D2D2D"
+    }
+  },
+  "functions": [
+    {
+      "name": "main",
+      "entry": "main.js",
+      "input": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "componentID": {
+            "type": "string",
+            "title": "Component ID",
+            "description": "Used for smooth scroll anchor"
+          },
+          "sectionHeading": {
+            "type": "string",
+            "title": "Section Heading"
+          },
+          "sectionContent": {
+            "type": "FormattedText",
+            "title": "Section Content"
+          },
+          "testimonialArray":  {
+            "type": "array",
+            "title": "Testimonial Content",
+            "items": {
+              "type": "object",
+              "title": "Testimonial Details",
+              "additionalProperties": false,
+              "properties": {
+                "testimonialName": {
+                  "type": "string",
+                  "title": "Name of person giving testimonial"
+                },
+                "testimonialTitle": {
+                  "type": "string",
+                  "title": "Job Title of person giving testimonial"
+                },
+                "testimonialAvatar": {
+                  "type": "SquizImage",
+                  "title": "Image Path",
+                  "description":"Image of person giving testimonial"
+                },
+                "testimonialRating": {
+                  "type": "integer",
+                  "title": "Testimonial Rating",
+                  "description": "Provide a numberical rating",
+                  "minimum": 1,
+                  "maximum": 5,
+                  "default": 5
+                },
+                "testimonialContent": {
+                    "type": "string",
+                    "title": "Testimonial Body"
+                }
+              },
+              "required": ["testimonialName","testimonialTitle","testimonialContent"]
+            }
+          }
+        },
+        "required": ["testimonialArray"]
+      },
+      "output": {
+        "responseType": "html",
+        "staticFiles": [
+          {
+            "location": "header",
+            "file": {
+              "type": "css",
+              "filepath": "default.css"
+            }
+          },
+          {
+            "location": "footer",
+            "file": {
+              "type": "js",
+              "filepath": "default.js"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "previews": {
+    "default": {
+      "functionData": {
+        "main": {
+          "inputData": {
+            "type": "file",
+            "path": "previews/example.data.json"
+          },
+          "wrapper": {
+            "path": "previews/preview.html"
+          }
+        }
+      }
+    }
+  },
+  "staticFiles": {
+    "locationRoot": "static"
+  }
+}

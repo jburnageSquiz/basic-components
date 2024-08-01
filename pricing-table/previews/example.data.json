@@ -1,0 +1,100 @@
+{
+    "componentID":"pricing",
+    "sectionHeading":"Pricing",
+    "sectionContent":"<p>Ipsa sint sit. Quis ducimus tempore dolores impedit et dolor cumque alias maxime. Enim reiciendis minus et rerum hic non. Dicta quas cum quia maiores iure. Quidem nulla qui assumenda incidunt voluptatem tempora deleniti soluta.</p>",
+    "offerArray": [
+        {
+            "offerPromote": false,
+            "offerTitle": "Free Plan",
+            "offerIcon":"box",
+            "offerSup": "$",
+            "offerPrice": "0",
+            "offerPriceExtra": "/month",
+            "offerLinkURL": "matrix-asset://component-service-token/893",
+            "featureArray": [
+                {
+                    "featureTitle":"Quam adipiscing vitae proin",
+                    "featureAvailable": true
+                },
+                {
+                    "featureTitle":"Nec feugiat nisl pretium",
+                    "featureAvailable": true
+                },
+                {
+                    "featureTitle":"Nulla at volutpat diam uteera",
+                    "featureAvailable": true
+                },
+                {
+                    "featureTitle":"Pharetra massa massa ultricies",
+                    "featureAvailable": false
+                },
+                {
+                    "featureTitle":"Massa ultricies mi quis hendrerit",
+                    "featureAvailable": false
+                }
+            ]
+        },
+        {
+            "offerPromote": true,
+            "offerTitle": "Business Plan",
+            "offerIcon":"rocket",
+            "offerSup": "$",
+            "offerPrice": "29",
+            "offerPriceExtra": "/month",
+            "offerLinkURL": "matrix-asset://component-service-token/893",
+            "featureArray": [
+                {
+                    "featureTitle":"Quam adipiscing vitae proin",
+                    "featureAvailable": true
+                },
+                {
+                    "featureTitle":"Nec feugiat nisl pretium",
+                    "featureAvailable": true
+                },
+                {
+                    "featureTitle":"Nulla at volutpat diam uteera",
+                    "featureAvailable": true
+                },
+                {
+                    "featureTitle":"Pharetra massa massa ultricies",
+                    "featureAvailable": true
+                },
+                {
+                    "featureTitle":"Massa ultricies mi quis hendrerit",
+                    "featureAvailable": false
+                }
+            ]
+        },
+        {
+            "offerPromote": false,
+            "offerTitle": "Developer Plan",
+            "offerIcon":"send",
+            "offerSup": "$",
+            "offerPrice": "49",
+            "offerPriceExtra": "/month",
+            "offerLinkURL": "matrix-asset://component-service-token/893",
+            "featureArray": [
+                {
+                    "featureTitle":"Quam adipiscing vitae proin",
+                    "featureAvailable": true
+                },
+                {
+                    "featureTitle":"Nec feugiat nisl pretium",
+                    "featureAvailable": true
+                },
+                {
+                    "featureTitle":"Nulla at volutpat diam uteera",
+                    "featureAvailable": true
+                },
+                {
+                    "featureTitle":"Pharetra massa massa ultricies",
+                    "featureAvailable": true
+                },
+                {
+                    "featureTitle":"Massa ultricies mi quis hendrerit",
+                    "featureAvailable": true
+                }
+            ]
+        }
+    ]
+}

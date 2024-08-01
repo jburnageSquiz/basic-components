@@ -1,0 +1,139 @@
+{
+  "$schema": "http://localhost:3000/schemas/v1.json",
+  "name": "hero-banner",
+  "namespace": "ps-bootstrap-components",
+  "displayName": "Hero Banner",
+  "description": "Hero Banner",
+  "version": "0.0.6",
+  "mainFunction": "main",
+  "icon": {
+    "id": "image",
+    "color": {
+      "type": "hex",
+      "value": "#eb4d4b"
+    }
+  },
+  "functions": [
+    {
+      "name": "main",
+      "entry": "main.js",
+      "input": {
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "advanced": {
+                  "const": false
+                }
+              },
+              "required": []
+            },
+            "then": {
+              "properties": {},
+              "required": []
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "advanced": {
+                  "const": true
+                }
+              },
+              "required": []
+            },
+            "then": {
+              "properties": {
+                "transitionEffect": {
+                  "type": "string",
+                  "title": "Transition Effect",
+                  "description": "What type of transition do you wish to apply?",
+                  "enum": [
+                    "Fade Up",
+                    "Fade Down",
+                    "Fade Right",
+                    "Fade Left"
+                  ],
+                  "default": "Fade Up"
+                },
+                "transitionDelay": {
+                  "title": "Transition Delay",
+                  "description": "Set the transition delay for the effect",
+                  "type": "integer",
+                  "minimum": 100,
+                  "maximum": 300,
+                  "default": 100
+                }
+              },
+              "required": []
+            }
+          }
+        ],
+        "properties": {
+          "componentID": {
+            "type": "string",
+            "title": "Component ID",
+            "description": "Used for smooth scroll anchor"
+          },
+          "heroHeading": {
+            "type": "string",
+            "title": "Hero Heading"
+          },
+          "heroContent": {
+            "type": "string",
+            "title": "Hero Content"
+          },
+          "heroImage": {
+            "type": "SquizImage",
+            "title": "Image Path",
+            "description": "Background Image"
+          },
+          "advanced": {
+            "default": false,
+            "title": "Display Transition Settings",
+            "type": "boolean"
+          }
+        },
+        "required": [],
+        "type": "object"
+      },
+      "output": {
+        "responseType": "html",
+        "staticFiles": [
+          {
+            "location": "header",
+            "file": {
+              "type": "css",
+              "filepath": "default.css"
+            }
+          },
+          {
+            "location": "footer",
+            "file": {
+              "type": "js",
+              "filepath": "default.js"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "previews": {
+    "default": {
+      "functionData": {
+        "main": {
+          "inputData": {
+            "type": "file",
+            "path": "previews/example.data.json"
+          },
+          "wrapper": {
+            "path": "previews/preview.html"
+          }
+        }
+      }
+    }
+  },
+  "staticFiles": {
+    "locationRoot": "static"
+  }
+}

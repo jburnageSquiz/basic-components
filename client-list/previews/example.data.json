@@ -1,0 +1,85 @@
+{
+    "componentID":"clientSection",
+    "clientArray": [
+        {
+            "clientName": "Squiz",
+            "clientLinkURL": "matrix-asset://component-service-token/893",
+            "clientLogo": {
+                "name": "My Image",
+                "alt": "This is the image alt text",
+                "caption": "This is a caption",
+                "imageVariations": {
+                    "original": {
+                        "url": "https://uploads-ssl.webflow.com/5c3a510a91db03828e568da1/5c3a6a895c550caef54b1520_Logo%205%20Copy%207.svg",
+                        "width": 100,
+                        "height": 100,
+                        "byteSize": 1000,
+                        "mimeType": "image/jpeg",
+                        "aspectRatio": "1:1",
+                        "sha1Hash": "1234567890abcdef1234567890abcdef12345678"
+                    }
+                }
+            }
+        },
+        {
+            "clientName": "Squiz",
+            "clientLinkURL": "matrix-asset://component-service-token/893",
+            "clientLogo": {
+                "name": "My Image",
+                "alt": "This is the image alt text",
+                "caption": "This is a caption",
+                "imageVariations": {
+                    "original": {
+                        "url": "https://uploads-ssl.webflow.com/5c3a510a91db03828e568da1/5c3a6a8c652ba077e9640881_Logo%205%20Copy%209.svg",
+                        "width": 100,
+                        "height": 100,
+                        "byteSize": 1000,
+                        "mimeType": "image/jpeg",
+                        "aspectRatio": "1:1",
+                        "sha1Hash": "1234567890abcdef1234567890abcdef12345678"
+                    }
+                }
+            }
+        },
+        {
+            "clientName": "Squiz",
+            "clientLinkURL": "matrix-asset://component-service-token/893",
+            "clientLogo": {
+                "name": "My Image",
+                "alt": "This is the image alt text",
+                "caption": "This is a caption",
+                "imageVariations": {
+                    "original": {
+                        "url": "https://uploads-ssl.webflow.com/5c3a510a91db03828e568da1/5c3a6a8f08173325826394a5_Logo%205%20Copy%203.svg",
+                        "width": 100,
+                        "height": 100,
+                        "byteSize": 1000,
+                        "mimeType": "image/jpeg",
+                        "aspectRatio": "1:1",
+                        "sha1Hash": "1234567890abcdef1234567890abcdef12345678"
+                    }
+                }
+            }
+        },
+        {
+            "clientName": "Squiz",
+            "clientLinkURL": "matrix-asset://component-service-token/893",
+            "clientLogo": {
+                "name": "My Image",
+                "alt": "This is the image alt text",
+                "caption": "This is a caption",
+                "imageVariations": {
+                    "original": {
+                        "url": "https://uploads-ssl.webflow.com/5c3a510a91db03828e568da1/5c3a6a8e6bc471b88202e53e_Logo%205%20Copy%208.svg",
+                        "width": 100,
+                        "height": 100,
+                        "byteSize": 1000,
+                        "mimeType": "image/jpeg",
+                        "aspectRatio": "1:1",
+                        "sha1Hash": "1234567890abcdef1234567890abcdef12345678"
+                    }
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,118 @@
+{
+  "$schema": "http://localhost:3000/schemas/v1.json",
+  "name": "cs-faqs",
+  "namespace": "ps-bootstrap-components",
+  "displayName": "FAQs",
+  "description": "Build Frequently Asked Questions with optional side column text",
+  "version": "0.0.2",
+  "mainFunction": "main",
+  "icon": {
+    "id": "question_answer",
+    "color": {
+      "type": "hex",
+      "value": "#2D2D2D"
+    }
+  },
+  "functions": [
+    {
+      "name": "main",
+      "entry": "main.js",
+      "input": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "componentID": {
+            "type": "string",
+            "title": "Component ID",
+            "description": "Used for smooth scroll anchor"
+          },
+          "sectionHeading": {
+            "type": "string",
+            "title": "Section Heading"
+          },
+            "sectionContent": {
+            "type": "FormattedText",
+            "title": "Section Content"
+          },
+          "sectionLayout": {
+            "title": "Display side content",
+            "description": "Do you want to show side content (Heading & Text)",
+            "type": "boolean",
+            "default": true
+          },
+          "faqArray":  {
+            "type": "array",
+            "title": "FAQs Content",
+            "items": {
+              "type": "object",
+              "title": "FAQ Details",
+              "additionalProperties": false,
+              "properties": {
+                "faqTitle": {
+                  "type": "string",
+                  "title": "Card Title"
+                },
+                "faqContent": {
+                    "type": "string",
+                    "title": "Card Body"
+                }
+              },
+              "required": ["faqTitle","faqContent"]
+            }
+          }
+        },
+        "required": ["faqArray"]
+      },
+      "output": {
+        "responseType": "html",
+        "staticFiles": [
+          {
+            "location": "header",
+            "file": {
+              "type": "css",
+              "filepath": "default.css"
+            }
+          },
+          {
+            "location": "footer",
+            "file": {
+              "type": "js",
+              "filepath": "default.js"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "previews": {
+    "default": {
+      "functionData": {
+        "main": {
+          "inputData": {
+            "type": "file",
+            "path": "previews/example.data.json"
+          },
+          "wrapper": {
+            "path": "previews/preview.html"
+          }
+        }
+      }
+    },
+    "no-content": {
+      "functionData": {
+        "main": {
+          "inputData": {
+            "type": "file",
+            "path": "previews/example.data.nocontent.json"
+          },
+          "wrapper": {
+            "path": "previews/preview.html"
+          }
+        }
+      }
+    }
+  },
+  "staticFiles": {
+    "locationRoot": "static"
+  }
+}

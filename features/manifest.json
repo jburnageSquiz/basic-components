@@ -1,0 +1,218 @@
+{
+  "$schema": "http://localhost:3000/schemas/v1.json",
+  "name": "features",
+  "namespace": "ps-bootstrap-components",
+  "displayName": "Features",
+  "description": "Featured Content - Text & Image(s), Layout switch",
+  "version": "0.0.2",
+  "mainFunction": "main",
+  "icon": {
+    "id": "art_track",
+    "color": {
+      "type": "hex",
+      "value": "#f0932b"
+    }
+  },
+  "functions": [
+    {
+      "name": "main",
+      "entry": "main.js",
+      "input": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "componentID": {
+            "type": "string",
+            "title": "Component ID",
+            "description": "Used for smooth scroll anchor"
+          },
+          "sectionHeading": {
+            "type": "string",
+            "title": "Section Heading"
+          },
+            "sectionContent": {
+            "type": "FormattedText",
+            "title": "Section Content"
+          },
+          "introTextTransitionEffect": {
+            "type": "string",
+            "title": "Intro Text Transition Effect",
+            "description": "What type of transition do you wish to apply to the intro text?",
+            "enum": [
+              "Fade Up",
+              "Fade Down",
+              "Fade Right",
+              "Fade Left"
+            ],
+            "default": "Fade Up"
+          },
+          "featureArray":  {
+            "type": "array",
+            "title": "Featured Content",
+            "items": {
+              "type": "object",
+              "title": "Feature Details",
+              "additionalProperties": false,
+              "properties": {
+                "featureTitle": {
+                  "type": "string",
+                  "title": "Feature Title"
+                },
+                "featureContent": {
+                    "type": "string",
+                    "title": "Feature Body"
+                },
+                "featureLinkURL": {
+                  "type": "string",
+                  "format": "matrix-asset-uri",
+                  "title": "Link URL"
+                },
+                "featureLinkText": {
+                  "type": "string",
+                  "title": "Link Text"
+                },
+                "textTransitionEffect": {
+                  "type": "string",
+                  "title": "Body Text Transition Effect",
+                  "description": "What type of transition do you wish to apply to the body text?",
+                  "enum": [
+                    "Fade Up",
+                    "Fade Down",
+                    "Fade Right",
+                    "Fade Left"
+                  ],
+                  "default": "Fade Up"
+                },
+                "textTransitionDelay": {
+                  "title": "Body Text Transition Delay",
+                  "description": "Set the transition delay for the body text",
+                  "type": "integer",
+                  "minimum": 100,
+                  "maximum": 300,
+                  "default": 100
+                },
+                "imageTransitionEffect": {
+                  "type": "string",
+                  "title": "Image Transition Effect",
+                  "description": "What type of transition do you wish to apply to your image(s)?",
+                  "enum": [
+                    "Zoom In",
+                    "Zoom In - Up",
+                    "Zoom In - Down",
+                    "Zoom Out",
+                    "Zoom Out - Up",
+                    "Zoom Out - Down"
+                  ],
+                  "default": "Zoom Out"
+                },
+                "imageTransitionDelay": {
+                  "title": "Image Transition Delay",
+                  "description": "Set the transition delay for your image(s)",
+                  "type": "integer",
+                  "minimum": 100,
+                  "maximum": 300,
+                  "default": 200
+                },
+                "featureImageArray":  {
+                  "type": "array",
+                  "title": "Featured Image Stack",
+                  "items": {
+                    "type": "object",
+                    "title": "Feature Image",
+                    "additionalProperties": false,
+                    "properties": {
+                      "featureImage": {
+                        "type": "SquizImage",
+                        "title": "Image Path",
+                        "description":"Image of person giving testimonial"
+                      }
+                    },
+                    "required": ["featureImage"]
+                  }
+                }
+              },
+              "required": ["featureTitle","featureContent"]
+            }
+          }
+        },
+        "required": ["featureArray"]
+      },
+      "output": {
+        "responseType": "html",
+        "staticFiles": [
+          {
+            "location": "header",
+            "file": {
+              "type": "css",
+              "filepath": "default.css"
+            }
+          },
+          {
+            "location": "footer",
+            "file": {
+              "type": "js",
+              "filepath": "default.js"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "previews": {
+    "default": {
+      "functionData": {
+        "main": {
+          "inputData": {
+            "type": "file",
+            "path": "previews/example.data.json"
+          },
+          "wrapper": {
+            "path": "previews/preview.html"
+          }
+        }
+      }
+    }
+  },
+  "staticFiles": {
+    "locationRoot": "static"
+  },
+  "mockedUris": {
+    "matrix-asset://component-service-token/893" : {
+      "type": "inline",
+      "value": {
+        "id": "id-inline",
+        "type": "root_folder",
+        "type_name": "Root Folder",
+        "version": "0.0.1",
+        "name": "Page Name (Matrix Asset Name)",
+        "short_name": "Page Name",
+        "status": {
+          "id": 2,
+          "code": "under_construction"
+        },
+        "created": {
+          "date": "2020-02-27T09:47:27+11:00",
+          "user_id": null
+        },
+        "updated": {
+          "date": "2020-02-27T09:47:27+11:00",
+          "user_id": ""
+        },
+        "published": {
+          "date": "2020-02-27T09:47:27+11:00",
+          "user_id": "null"
+        },
+        "status_changed": {
+          "date": "2020-02-27T09:47:27+11:00",
+          "user_id": "null"
+        },
+        "url": "https://www.squiz.net/component-service",
+        "urls": [],
+        "attributes": {
+          "test": "test"
+        },
+        "additional": {}
+      }
+    }
+  }
+}

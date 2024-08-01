@@ -1,0 +1,24 @@
+{
+  "componentID": "heroSection",
+  "heroHeading": "Welcome to your Squiz DXP evaluation",
+  "heroContent": "The best place to start building brilliant experiences, fast!",
+  "heroImage": {
+    "name": "My Image",
+    "alt": "This is the image alt text",
+    "caption": "This is a caption",
+    "imageVariations": {
+      "original": {
+        "url": "https://picsum.photos/id/39/1920/1280",
+        "width": 100,
+        "height": 100,
+        "byteSize": 1000,
+        "mimeType": "image/jpeg",
+        "aspectRatio": "1:1",
+        "sha1Hash": "1234567890abcdef1234567890abcdef12345678"
+      }
+    }
+  },
+  "advanced": true,
+  "transitionEffect": "Fade Down",
+  "transitionDelay": 100
+}  

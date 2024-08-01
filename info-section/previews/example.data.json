@@ -1,0 +1,34 @@
+{
+    "componentID":"aboutSection",
+    "sectionHeadingTag":"About Us",
+    "sectionHeading":"Ducimus rerum libero reprehenderit cumque",
+    "sectionContent":"<p>Ipsa sint sit. Quis ducimus tempore dolores impedit et dolor cumque alias maxime. Enim reiciendis minus et rerum hic non. Dicta quas cum quia maiores iure. Quidem nulla qui assumenda incidunt voluptatem tempora deleniti soluta.</p>",
+    "sectionLinkURL":"matrix-asset://valid-matrix-identifier/893",
+    "sectionLinkText":"Discover More",
+    "cardsArray": [
+        {
+            "cardTitle": "Eius provident",
+            "cardContent": "Magni repellendus vel ullam hic officia accusantium ipsa dolor omnis dolor voluptatem",
+            "cardIcon": "buildings",
+            "cardLinkURL":"matrix-asset://valid-matrix-identifier/893"
+        },
+        {
+            "cardTitle": "Rerum aperiam",
+            "cardContent": "Magni repellendus vel ullam hic officia accusantium ipsa dolor omnis dolor voluptatem",
+            "cardIcon": "clipboard-pulse",
+            "cardLinkURL":"matrix-asset://valid-matrix-identifier/893"
+        },
+        {
+            "cardTitle": "Veniam omnis",
+            "cardContent": "Omnis perferendis molestias culpa sed. Recusandae quas possimus. Quod consequatur corrupti",
+            "cardIcon": "command",
+            "cardLinkURL":"matrix-asset://valid-matrix-identifier/893"
+        },
+        {
+            "cardTitle": "Delares sapiente",
+            "cardContent": "Sint et dolor voluptas minus possimus nostrum. Reiciendis commodi eligendi omnis quideme lorenda",
+            "cardIcon": "graph-up-arrow",
+            "cardLinkURL":"matrix-asset://valid-matrix-identifier/893"
+        }
+    ]
+}

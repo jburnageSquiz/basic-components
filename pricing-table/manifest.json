@@ -1,0 +1,184 @@
+{
+  "$schema": "http://localhost:3000/schemas/v1.json",
+  "name": "cs-pricing-table",
+  "namespace": "ps-bootstrap-components",
+  "displayName": "Pricing Table",
+  "description": "Pricing Table with features",
+  "version": "0.0.1",
+  "mainFunction": "main",
+  "icon": {
+    "id": "sell",
+    "color": {
+      "type": "hex",
+      "value": "#2D2D2D"
+    }
+  },
+  "functions": [
+    {
+      "name": "main",
+      "entry": "main.js",
+      "input": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "componentID": {
+            "type": "string",
+            "title": "Component ID",
+            "description": "Used for smooth scroll anchor"
+          },
+          "sectionHeading": {
+            "type": "string",
+            "title": "Section Heading"
+          },
+            "sectionContent": {
+            "type": "FormattedText",
+            "title": "Section Content"
+          },
+          "offerArray":  {
+            "type": "array",
+            "title": "Pricing Content",
+            "items": {
+              "type": "object",
+              "title": "Offer Details",
+              "additionalProperties": false,
+              "properties": {
+                "offerPromote": {
+                  "title": "Promoted Offer",
+                  "description": "Is the key promoted offer?",
+                  "type": "boolean",
+                  "default": false
+                },
+                "offerTitle": {
+                  "type": "string",
+                  "title": "Offer Title"
+                },
+                "offerIcon": {
+                  "type": "string",
+                  "title": "Offer Icon",
+                  "description":"Use Bootstrap Icon reference"
+                },
+                "offerSup": {
+                  "type": "string",
+                  "title": "Pre Price Unit"
+                },
+                "offerPrice": {
+                  "type": "string",
+                  "title": "Offer Price"
+                },
+                "offerPriceExtra": {
+                  "type": "string",
+                  "title": "Offer Price Unit"
+                },
+                "offerLinkURL": {
+                  "type": "string",
+                  "format": "matrix-asset-uri",
+                  "title": "Link URL"
+                },
+                "featureArray":  {
+                  "type": "array",
+                  "title": "Offer Features",
+                  "items": {
+                    "type": "object",
+                    "title": "Feature Details",
+                    "additionalProperties": false,
+                    "properties": {
+                      "featureTitle": {
+                        "type": "string",
+                        "title": "Feature Title"
+                      },
+                      "featureAvailable": {
+                        "title": "Feature availability",
+                        "description": "Is the feature available within the offer",
+                        "type": "boolean",
+                        "default": true
+                      }
+                    },
+                    "required": ["featureTitle","featureAvailable"]
+                  }
+                }
+              },
+              "required": ["offerTitle","offerPrice", "offerIcon"]
+            }
+          }
+        },
+        "required": ["offerArray"]
+      },
+      "output": {
+        "responseType": "html",
+        "staticFiles": [
+          {
+            "location": "header",
+            "file": {
+              "type": "css",
+              "filepath": "default.css"
+            }
+          },
+          {
+            "location": "footer",
+            "file": {
+              "type": "js",
+              "filepath": "default.js"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "previews": {
+    "default": {
+      "functionData": {
+        "main": {
+          "inputData": {
+            "type": "file",
+            "path": "previews/example.data.json"
+          },
+          "wrapper": {
+            "path": "previews/preview.html"
+          }
+        }
+      }
+    }
+  },
+  "staticFiles": {
+    "locationRoot": "static"
+  },
+  "mockedUris": {
+    "matrix-asset://component-service-token/893" : {
+      "type": "inline",
+      "value": {
+        "id": "id-inline",
+        "type": "root_folder",
+        "type_name": "Root Folder",
+        "version": "0.0.1",
+        "name": "Root Folder",
+        "short_name": "/",
+        "status": {
+          "id": 2,
+          "code": "under_construction"
+        },
+        "created": {
+          "date": "2020-02-27T09:47:27+11:00",
+          "user_id": null
+        },
+        "updated": {
+          "date": "2020-02-27T09:47:27+11:00",
+          "user_id": ""
+        },
+        "published": {
+          "date": "2020-02-27T09:47:27+11:00",
+          "user_id": "null"
+        },
+        "status_changed": {
+          "date": "2020-02-27T09:47:27+11:00",
+          "user_id": "null"
+        },
+        "url": "https://www.squiz.net/component-service",
+        "urls": [],
+        "attributes": {
+          "test": "test"
+        },
+        "additional": {}
+      }
+    }
+  }
+}

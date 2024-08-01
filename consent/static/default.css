@@ -1,0 +1,23 @@
+.consent-wrapper {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+.consent-wrapper button {
+  width: 90%;
+  height: 90%;
+  margin: 5%;
+}
+.consent-wrapper button i {
+  font-size: 20px;
+  font-weight: bolder;
+}
+.response {
+  margin: 1em 0;
+  padding: 1em 2em;
+  border: 1px solid grey;
+  background: #efefef;
+}

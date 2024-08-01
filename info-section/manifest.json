@@ -1,0 +1,168 @@
+{
+  "$schema": "http://localhost:3000/schemas/v1.json",
+  "name": "info-section",
+  "namespace": "ps-bootstrap-components",
+  "displayName": "Info Section",
+  "description": "Information Section",
+  "version": "0.0.5",
+  "mainFunction": "main",
+  "icon": {
+    "id": "bento",
+    "color": {
+      "type": "hex",
+      "value": "#2D2D2D"
+    }
+  },
+  "functions": [
+    {
+      "name": "main",
+      "entry": "main.js",
+      "input": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "componentID": {
+            "type": "string",
+            "title": "Component ID",
+            "description": "Used for smooth scroll anchor"
+          },
+          "sectionHeadingTag": {
+            "type": "string",
+            "title": "Heading Sub Tag"
+          },
+          "sectionHeading": {
+            "type": "string",
+            "title": "Information Section Heading"
+          },
+            "sectionContent": {
+            "type": "FormattedText",
+            "title": "Information Section Content"
+          },
+          "sectionLinkURL": {
+            "type": "string",
+            "format": "matrix-asset-uri",
+            "title": "Link URL"
+          },
+          "sectionLinkText": {
+            "type": "string",
+            "title": "Link Text"
+          },
+          "cardsArray":  {
+            "type": "array",
+            "title": "Cards Content",
+            "items": {
+              "type": "object",
+              "title": "Card Details",
+              "additionalProperties": false,
+              "properties": {
+                "cardTitle": {
+                  "type": "string",
+                  "title": "Card Title"
+                },
+                "cardContent": {
+                    "type": "string",
+                    "title": "Card Body"
+                },
+                "cardIcon": {
+                  "type": "string",
+                  "title": "Card Icon"
+                },
+                "cardLinkURL": {
+                  "type": "string",
+                  "format": "matrix-asset-uri",
+                  "title": "Link URL"
+                },
+                "cardLinkManualURL": {
+                  "type": "string",
+                  "title": "Link URL (Manual)"
+                }
+              },
+              "required": ["cardTitle","cardIcon"]
+            }
+          }
+        },
+        "required": ["cardsArray"]
+      },
+      "output": {
+        "responseType": "html",
+        "staticFiles": [
+          {
+            "location": "header",
+            "file": {
+              "type": "css",
+              "filepath": "default.css"
+            }
+          },
+          {
+            "location": "footer",
+            "file": {
+              "type": "js",
+              "filepath": "default.js"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "previews": {
+    "default": {
+      "functionData": {
+        "main": {
+          "inputData": {
+            "type": "file",
+            "path": "previews/example.data.json"
+          },
+          "wrapper": {
+            "path": "previews/preview.html"
+          }
+        }
+      }
+    }
+  },
+  "staticFiles": {
+    "locationRoot": "static"
+  },
+  "mockedUris": {
+    "matrix-asset://valid-matrix-identifier/893": {
+      "type": "inline",
+      "value": {
+        "id": "id-inline",
+        "type": "root_folder",
+        "type_name": "Root Folder",
+        "version": "0.0.1",
+        "name": "Root Folder",
+        "short_name": "/",
+        "status": {
+          "id": 2,
+          "code": "under_construction"
+        },
+        "created": {
+          "date": "2020-02-27T09:47:27+11:00",
+          "user_id": null
+        },
+        "updated": {
+          "date": "2020-02-27T09:47:27+11:00",
+          "user_id": ""
+        },
+        "published": {
+          "date": "2020-02-27T09:47:27+11:00",
+          "user_id": "null"
+        },
+        "status_changed": {
+          "date": "2020-02-27T09:47:27+11:00",
+          "user_id": "null"
+        },
+        "url": "test.com",
+        "urls": [],
+        "attributes": {
+          "test": "test"
+        },
+        "additional": {}
+      }
+    },
+    "foo://valid-file-uri": {
+      "type": "file",
+      "path": "./package.json"
+    }
+  }
+}

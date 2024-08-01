@@ -1,0 +1,51 @@
+{
+    "componentID":"testimonialSection",
+    "sectionHeading":"Testimonials",
+    "sectionContent":"<p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>",
+    "testimonialArray": [
+        {
+            "testimonialName": "Saul Goodman",
+            "testimonialTitle": "Entrepreneur",
+            "testimonialAvatar": {
+                "name": "My Image",
+                "alt": "This is the image alt text",
+                "caption": "This is a caption",
+                "imageVariations": {
+                    "original": {
+                        "url": "https://www.placemonkeys.com/720/405?greyscale",
+                        "width": 100,
+                        "height": 100,
+                        "byteSize": 1000,
+                        "mimeType": "image/jpeg",
+                        "aspectRatio": "1:1",
+                        "sha1Hash": "1234567890abcdef1234567890abcdef12345678"
+                    }
+                }
+            },
+            "testimonialRating":5,
+            "testimonialContent":"Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid."
+        },
+        {
+            "testimonialName": "Sara Wilsson",
+            "testimonialTitle": "Designer",
+            "testimonialAvatar": {
+                "name": "My Image",
+                "alt": "This is the image alt text",
+                "caption": "This is a caption",
+                "imageVariations": {
+                    "original": {
+                        "url": "https://www.placemonkeys.com/720/405?greyscale",
+                        "width": 100,
+                        "height": 100,
+                        "byteSize": 1000,
+                        "mimeType": "image/jpeg",
+                        "aspectRatio": "1:1",
+                        "sha1Hash": "1234567890abcdef1234567890abcdef12345678"
+                    }
+                }
+            },
+            "testimonialRating":4,
+            "testimonialContent":"Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa."
+        }
+    ]
+}
